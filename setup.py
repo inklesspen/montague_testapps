@@ -81,10 +81,10 @@ setup(
             'caps2=montague_testapps.apps:CapFilter',
         ],
         'paste.server_factory': [
-            'server_factory=montague_testapps.servers.make_server_factory',
+            'server_factory=montague_testapps.servers:make_server_factory',
         ],
         'paste.server_runner': [
-            'server_runner=montague_testapps.servers.make_server_runner',
+            'server_runner=montague_testapps.servers:make_server_runner',
         ],
         'montague.config_loader': [
             'testjson=montague_testapps.config:JSONConfigLoader',

@@ -86,8 +86,5 @@ setup(
         'paste.server_runner': [
             'server_runner=montague_testapps.servers:make_server_runner',
         ],
-        'montague.config_loader': [
-            'testjson=montague_testapps.config:JSONConfigLoader',
-        ],
     },
 )

@@ -2,7 +2,7 @@
 Changelog
 =========
 
-unreleased
+0.1.2 (2015-06-14)
 -----------------------------------------
 
 * Removed testjson config loader; it's been merged into montague

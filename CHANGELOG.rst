@@ -2,6 +2,13 @@
 Changelog
 =========
 
+0.1.3 (2015-06-17)
+-----------------------------------------
+
+* Removed unused zope.interface requirement
+* Added some 'main' entrypoints (using existing objects)
+* Imported the submodules into the main namespace
+
 0.1.2 (2015-06-14)
 -----------------------------------------
 

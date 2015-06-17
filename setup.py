@@ -3,17 +3,16 @@
 from __future__ import absolute_import, print_function
 
 import io
-import os
 import re
 from glob import glob
 from os.path import basename
 from os.path import dirname
 from os.path import join
-from os.path import relpath
 from os.path import splitext
 
 from setuptools import find_packages
 from setuptools import setup
+
 
 def read(*names, **kwargs):
     return io.open(
@@ -59,7 +58,6 @@ setup(
     ],
     install_requires=[
         "six>=1.8.0",
-        "zope.interface>=4.1.1",
         "characteristic>=14.2.0",
         "webtest>=2.0.18",
     ],
@@ -67,6 +65,7 @@ setup(
     },
     entry_points={
         "paste.app_factory": [
+            'main=montague_testapps.apps:make_basic_app',
             'basic_app=montague_testapps.apps:make_basic_app',
             'other=montague_testapps.apps:make_basic_app2',
             'configed=montague_testapps.configapps:SimpleApp.make_app',
@@ -75,12 +74,14 @@ setup(
             'remote_addr=montague_testapps.apps:make_remote_addr',
         ],
         'paste.filter_factory': [
+            'main=montague_testapps.apps:make_cap_filter',
             'caps=montague_testapps.apps:make_cap_filter',
         ],
         'paste.filter_app_factory': [
             'caps2=montague_testapps.apps:CapFilter',
         ],
         'paste.server_factory': [
+            'main=montague_testapps.servers:make_server_factory',
             'server_factory=montague_testapps.servers:make_server_factory',
         ],
         'paste.server_runner': [

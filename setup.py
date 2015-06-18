@@ -24,7 +24,7 @@ def read(*names, **kwargs):
 setup(
     name='montague_testapps',
     version='0.1.3',
-    license='BSD',
+    license='MIT',
     description='Test applications for Montague (mostly extracted from the PasteDeploy test suite)',
     long_description='%s\n%s' % (read('README.rst'), re.sub(':[a-z]+:`~?(.*?)`', r'``\1``', read('CHANGELOG.rst'))),
     author='Jon Rosebaugh',
